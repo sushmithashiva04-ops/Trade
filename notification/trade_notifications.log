@@ -1,0 +1,97 @@
+2025-11-12T10:27:45.749+05:30  INFO 24200 --- [notification] [main] c.e.n.NotificationApplicationTests       : Starting NotificationApplicationTests using Java 21.0.8 with PID 24200 (started by User1 in C:\Users\User1\Downloads\notification\notification)
+2025-11-12T10:27:45.752+05:30  INFO 24200 --- [notification] [main] c.e.n.NotificationApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2025-11-12T10:27:46.568+05:30  INFO 24200 --- [notification] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-12T10:27:46.608+05:30  INFO 24200 --- [notification] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+2025-11-12T10:27:47.111+05:30  INFO 24200 --- [notification] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-12T10:27:47.179+05:30  INFO 24200 --- [notification] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-12T10:27:47.222+05:30  INFO 24200 --- [notification] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-12T10:27:47.649+05:30  INFO 24200 --- [notification] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-12T10:27:47.695+05:30  INFO 24200 --- [notification] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-12T10:27:47.921+05:30  INFO 24200 --- [notification] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notification user=SA
+2025-11-12T10:27:47.924+05:30  INFO 24200 --- [notification] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-12T10:27:47.989+05:30  INFO 24200 --- [notification] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-12T10:27:48.351+05:30  INFO 24200 --- [notification] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-12T10:27:48.356+05:30  INFO 24200 --- [notification] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-12T10:27:48.580+05:30  WARN 24200 --- [notification] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-12T10:27:49.447+05:30  INFO 24200 --- [notification] [main] c.e.n.NotificationApplicationTests       : Started NotificationApplicationTests in 4.094 seconds (process running for 5.456)
+2025-11-12T10:27:50.552+05:30  INFO 24200 --- [notification] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-12T10:27:50.554+05:30  INFO 24200 --- [notification] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-12T10:27:50.556+05:30  INFO 24200 --- [notification] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-12T10:28:19.893+05:30  INFO 24724 --- [notification] [restartedMain] c.e.n.NotificationApplication            : Starting NotificationApplication using Java 21.0.8 with PID 24724 (C:\Users\User1\Downloads\notification\notification\target\classes started by User1 in C:\Users\User1\Downloads\notification\notification)
+2025-11-12T10:28:19.896+05:30  INFO 24724 --- [notification] [restartedMain] c.e.n.NotificationApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-12T10:28:19.947+05:30  INFO 24724 --- [notification] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-12T10:28:19.948+05:30  INFO 24724 --- [notification] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-12T10:28:20.844+05:30  INFO 24724 --- [notification] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-12T10:28:20.878+05:30  INFO 24724 --- [notification] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2025-11-12T10:28:21.588+05:30  INFO 24724 --- [notification] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-11-12T10:28:21.607+05:30  INFO 24724 --- [notification] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-12T10:28:21.608+05:30  INFO 24724 --- [notification] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-12T10:28:21.659+05:30  INFO 24724 --- [notification] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-12T10:28:21.660+05:30  INFO 24724 --- [notification] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1712 ms
+2025-11-12T10:28:21.906+05:30  INFO 24724 --- [notification] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-12T10:28:21.974+05:30  INFO 24724 --- [notification] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-12T10:28:22.016+05:30  INFO 24724 --- [notification] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-12T10:28:22.409+05:30  INFO 24724 --- [notification] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-12T10:28:22.440+05:30  INFO 24724 --- [notification] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-12T10:28:22.626+05:30  INFO 24724 --- [notification] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notification user=SA
+2025-11-12T10:28:22.628+05:30  INFO 24724 --- [notification] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-12T10:28:22.698+05:30  INFO 24724 --- [notification] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-12T10:28:23.021+05:30  INFO 24724 --- [notification] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-12T10:28:23.026+05:30  INFO 24724 --- [notification] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-12T10:28:23.153+05:30  WARN 24724 --- [notification] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-12T10:28:23.566+05:30  INFO 24724 --- [notification] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notification'
+2025-11-12T10:28:23.686+05:30  WARN 24724 --- [notification] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-11-12T10:28:23.754+05:30  INFO 24724 --- [notification] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2025-11-12T10:28:23.980+05:30  INFO 24724 --- [notification] [restartedMain] c.e.n.NotificationApplication            : Started NotificationApplication in 4.616 seconds (process running for 5.112)
+2025-11-12T11:57:59.769+05:30  WARN 24724 --- [notification] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m949ms529µs900ns).
+2025-11-12T12:03:20.544+05:30  INFO 19160 --- [notification] [restartedMain] c.e.n.NotificationApplication            : Starting NotificationApplication using Java 21.0.8 with PID 19160 (C:\Users\User1\Downloads\notification\notification\target\classes started by User1 in C:\Users\User1\Downloads\notification\notification)
+2025-11-12T12:03:20.548+05:30  INFO 19160 --- [notification] [restartedMain] c.e.n.NotificationApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-12T12:03:20.610+05:30  INFO 19160 --- [notification] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-12T12:03:20.611+05:30  INFO 19160 --- [notification] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-12T12:03:21.603+05:30  INFO 19160 --- [notification] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-12T12:03:21.637+05:30  INFO 19160 --- [notification] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2025-11-12T12:03:22.439+05:30  INFO 19160 --- [notification] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-11-12T12:03:22.460+05:30  INFO 19160 --- [notification] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-12T12:03:22.461+05:30  INFO 19160 --- [notification] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-12T12:03:22.509+05:30  INFO 19160 --- [notification] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-12T12:03:22.510+05:30  INFO 19160 --- [notification] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1899 ms
+2025-11-12T12:03:22.744+05:30  INFO 19160 --- [notification] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-12T12:03:22.812+05:30  INFO 19160 --- [notification] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-12T12:03:22.859+05:30  INFO 19160 --- [notification] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-12T12:03:23.186+05:30  INFO 19160 --- [notification] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-12T12:03:23.225+05:30  INFO 19160 --- [notification] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-12T12:03:23.442+05:30  INFO 19160 --- [notification] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:notification user=SA
+2025-11-12T12:03:23.445+05:30  INFO 19160 --- [notification] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-12T12:03:23.527+05:30  INFO 19160 --- [notification] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-12T12:03:23.849+05:30  INFO 19160 --- [notification] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-12T12:03:23.855+05:30  INFO 19160 --- [notification] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-12T12:03:23.968+05:30  WARN 19160 --- [notification] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-12T12:03:24.365+05:30  INFO 19160 --- [notification] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:notification'
+2025-11-12T12:03:24.494+05:30  WARN 19160 --- [notification] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-11-12T12:03:24.569+05:30  INFO 19160 --- [notification] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2025-11-12T12:03:24.807+05:30  INFO 19160 --- [notification] [restartedMain] c.e.n.NotificationApplication            : Started NotificationApplication in 4.88 seconds (process running for 5.365)
+2025-11-12T13:38:53.430+05:30  WARN 19160 --- [notification] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m28s397ms407µs200ns).
+2025-11-12T13:50:47.114+05:30  WARN 19160 --- [notification] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m23s505ms163µs700ns).
+2025-11-12T14:39:13.842+05:30  WARN 19160 --- [notification] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=44m56s688ms492µs600ns).
+2025-11-12T14:55:20.546+05:30  WARN 19160 --- [notification] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m11s668ms268µs800ns).
