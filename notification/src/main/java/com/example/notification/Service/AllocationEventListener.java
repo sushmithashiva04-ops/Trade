@@ -15,8 +15,17 @@ public class AllocationEventListener {
         this.notificationService = notificationService;
     }
 
-    @JmsListener(destination = "TRADE_ALLOCATION_TOPIC", containerFactory = "jmsListenerContainerFactory", subscription = "notification-subscription")
+    @JmsListener(
+    	    destination = "TRADE_ALLOCATION_TOPIC",
+    	    containerFactory = "jmsListenerContainerFactory",
+    	    subscription = "notification-subscription"
+    	)
+
     public void receiveAllocationEvent(Map<String, Object> allocationEvent) {
+        // Log to file
         notificationService.notifyCustomer(allocationEvent);
+
+        // Print to console
+        System.out.println("📢 Notification Event Received: " + allocationEvent);
     }
 }
