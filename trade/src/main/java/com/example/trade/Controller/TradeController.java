@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.trade.Repo.TradeRequestRepository;
 import com.example.trade.entity.TradeRequest;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RestController
 @RequestMapping("/trades")
@@ -17,21 +17,24 @@ public class TradeController {
     private JmsTemplate jmsTemplate;
 
     @Autowired
-    private TradeRequestRepository tradeRepository;
-    
-//    @Autowired
-//    private TradeRequest tradeRequest;
+    private ObjectMapper objectMapper; 
 
     @PostMapping
     public String captureTrades(@RequestBody List<TradeRequest> trades) {
-        trades.forEach(trade -> {
-            tradeRepository.save(trade);
+        try {
+   
+            String json = objectMapper.writeValueAsString(trades);
 
-            // Publish event to ActiveMQ
-            jmsTemplate.convertAndSend("trade.captured.queue", trade);
-            System.out.println("📩 Published trade event for " + trade.getCustomerId());
-        });
+           
+            jmsTemplate.convertAndSend("trade.captured.queue", json);
 
-        return "Trades captured and published!";
+            System.out.println("📤 Sent " + trades.size() + " trades to queue as JSON");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "Failed to send trades!";
+        }
+
+        return "All trades submitted for processing!";
     }
 }

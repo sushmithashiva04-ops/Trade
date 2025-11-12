@@ -1,9 +1,7 @@
 package com.example.trade.Service;
 
-
 import com.example.trade.Repo.TradeRequestRepository;
 import com.example.trade.entity.TradeRequest;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
@@ -11,11 +9,13 @@ import org.springframework.stereotype.Component;
 
 import jakarta.jms.Topic;
 import java.time.LocalDateTime;
-import java.util.Map;
-import java.util.UUID;
+import java.util.List;
 
 @Component
 public class TradeRequestProducer {
+
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @Autowired
     private JmsTemplate jmsTemplate;
@@ -26,22 +26,25 @@ public class TradeRequestProducer {
     @Autowired
     private TradeRequestRepository tradeRequestRepository;
 
-    private final ObjectMapper mapper = new ObjectMapper();
+    public void processAndPublishAll(List<TradeRequest> trades) {
+        try {
+      
+            for (TradeRequest trade : trades) {
+                trade.setStatus("TO_BE_PROCESSED");
+                trade.setCreatedAt(LocalDateTime.now());
+            }
+            tradeRequestRepository.saveAll(trades);
 
-    public void sendTradeRequest(Map<String, Object> requestJson) throws JsonProcessingException {
-        String requestId = UUID.randomUUID().toString();
-        TradeRequest tradeRequest = new TradeRequest();
-//        tradeRequest.setRequestId(requestId);
-        tradeRequest.setCustomerId((String) requestJson.get("customerId"));
-        tradeRequest.setTradeType((String) requestJson.get("tradeType"));
-        tradeRequest.setSharesRequested((Integer) requestJson.get("sharesRequested"));
-        tradeRequest.setStatus("TO_BE_PROCESSED");
-        tradeRequest.setCreatedAt(LocalDateTime.now());
-        tradeRequest.setTradeDetailsJson(mapper.writeValueAsString(requestJson));
+            String json = objectMapper.writeValueAsString(trades);
 
-        // Store in DB
-        tradeRequestRepository.save(tradeRequest);
+            System.out.println("---------------------------------------------------");
+            System.out.println("Publishing batch to topic: " + tradeRequestTopic.getTopicName());
+            System.out.println("Message payload (trades count): " + trades.size());
+            System.out.println("---------------------------------------------------");
 
-         jmsTemplate.convertAndSend(tradeRequestTopic, tradeRequest);
+            jmsTemplate.convertAndSend(tradeRequestTopic, json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
